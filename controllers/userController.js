@@ -339,7 +339,7 @@ exports.sendPaymentReminderEmail = catchAsync(async (req, res, next) => {
 });
 
 exports.sendPaymentConfirmationEmail = catchAsync(async (req, res, next) => {
-  const currentUrl = "https://group-expense-manager-api.herokuapp.com/";
+  const currentUrl = "https://group-expense-manager-api.onrender.com/";
 
   const uniqueString = uuidv4() + req.headers.id;
 
@@ -472,7 +472,7 @@ exports.sendMemberConfirmationEmail = catchAsync(async (req, res, next) => {
   const member = groupVerification.members.find(
     (el) => el.memberId === req.body.receiver
   );
-  const currentUrl = "https://group-expense-manager-api.herokuapp.com/";
+  const currentUrl = "https://group-expense-manager-api.onrender.com/";
   const uniqueString = uuidv4() + member._id;
   memberVerificationTimestamp = Date.now();
   const confirmationMessage = `<p>Please <a href="${

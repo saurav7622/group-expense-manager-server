@@ -29,7 +29,7 @@ const createSaveHashedUniqueString = catchAsync(
 );
 
 const sendVerificationEmail = catchAsync(async ({ _id, email }, res, next) => {
-  const currentUrl = "https://group-expense-manager-api.herokuapp.com/";
+  const currentUrl = "https://group-expense-manager-api.onrender.com/";
 
   const uniqueString = uuidv4() + _id;
 
